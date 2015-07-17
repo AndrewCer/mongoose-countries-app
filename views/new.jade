@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1 Add a Country!
+  form(action='/countries', method='POST')
+    label Country Name:
+      br
+      input(type='text', name='country')
+      br
+    label Flag:
+      br
+      input(type='text', name='flag', placeholder='Img URL')
+      br
+    label Capital:
+      br
+      input(type='text', name='capital')
+      br
+    label Population:
+      br
+      input(type='number', name='population')
+    br
+    br
+    input(type='submit', value='Create!')
+    br
+    br
+    a(href='/countries') Go Home
